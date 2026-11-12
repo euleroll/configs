@@ -1,0 +1,90 @@
+* {
+  border: none;
+  font-family: JetBrainsMono Nerd Font, NotoSansCJK Semibold, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+  color: #bb9af7;
+  border-radius: 16px;
+}
+
+/* Common style for all modules */
+#workspaces,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#idle_inhibitor {
+  padding: 12px 0;
+  background-color: #1a1b26;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Individual colors */
+#clock {
+  color: #7aa2f7;
+}
+
+#battery {
+  color: #bb9af7;
+}
+
+#workspaces {
+  color: #f7768e;
+}
+
+#workspaces button { 
+  background: transparent;  
+  box-shadow: none; /* Removes the white line that looks like a border*/
+}
+
+#workspaces button:hover {
+  background-color: #24283b;
+}
+
+#cpu {
+  color: #e0af68;
+}
+
+#memory {
+  color: #73daca;
+}
+
+#backlight {
+  color: #9ece6a;
+}
+
+#pulseaudio {
+  color: #7dcfff;
+}
+
+#temperature {
+  color: #ff9e64;
+}
+
+/* Tray fixes */
+#tray > * {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+/* Optional module-specific states */
+#battery.charging {}
+#temperature.critical {}
+#pulseaudio.muted {}
+#network.disconnected {}
+#idle_inhibitor.activated {}
+

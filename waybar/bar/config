@@ -1,0 +1,109 @@
+{
+  "layer": "top",
+  "margin-left": 5,
+  "margin-right": 0,
+  "margin-top": 7,
+  "margin-bottom": 7,
+  "position": "left",
+  "width": 50,
+
+  "modules-left": ["clock"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "network",
+    "temperature",
+    "cpu",
+    "backlight",
+    "memory",
+    "pulseaudio",
+    "battery"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "disable-markup": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span foreground='#7dcfff'>壹</span>",
+      "2": "<span foreground='#7dcfff'>贰</span>",
+      "3": "<span foreground='#7dcfff'>叁</span>",
+      "4": "<span foreground='#7dcfff'>肆</span>",
+      "5": "<span foreground='#7dcfff'>伍</span>",
+      "6": "<span foreground='#7dcfff'>陆</span>",
+      "7": "<span foreground='#7dcfff'>柒</span>",
+      "8": "<span foreground='#7dcfff'>捌</span>",
+      "9": "<span foreground='#7dcfff'>壬</span>",
+      "10": "<span foreground='#7dcfff'>拾</span>",
+      "active": "<span foreground='#f7768e'><sup></sup></span>"
+    }
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  "network": {
+    "interface": "wlp4s0", // Change this to match your actual interface (e.g. "wlp2s0")
+    "format-wifi": "{signalStrength} 󰖩",
+    "format-ethernet": "",
+    "format-disconnected": "0 󱚼",
+    "interval": 5
+  },
+
+  "clock": {
+    "format": "{:%H\n%M}",
+    "format-alt": "{:%d\n%m\n%y}"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "{usage} "
+  },
+
+  "backlight": {
+    "format": "{percent} {icon}",
+    "states": [0, 19, 39, 59],
+    "format-icons": ["", "", "", ""]
+  },
+
+  "memory": {
+    "format": "{used:0.1f}G\n{total:0.1f}G",
+    "interval": 2
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "interval": 5,
+    "format": "{temperatureC}°C"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity} {icon}",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂"]
+  },
+
+  "pulseaudio": {
+    "format": "{volume} {icon}",
+    "format-bluetooth": "{volume} {icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphones": "󰕾",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    },
+    "on-click": "easyeffects"
+  }
+}
+

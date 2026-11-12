@@ -1,0 +1,13 @@
+[font]
+size =  15.0
+
+[font.normal]
+family = "Terminess Nerd Font Mono"
+style = "Bold"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+[general]
+import = ["~/.config/alacritty/catppuccin-latte.toml"]

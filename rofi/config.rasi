@@ -1,0 +1,89 @@
+@theme "tokyonight"
+
+configuration {
+  show-icons: true;
+  display-drun: "Kya!";
+  click-to-exit: false;
+}
+
+window {
+  location: south;
+  width: 40%;
+  background-color: @background;
+  foreground-color: @foreground;
+  border: 5px;
+  border-radius: 5px;
+  border-color: @background;
+}
+
+inputbar {
+  background-color: @background;
+  border: 2px;
+  border-radius: 5px;
+  border-color: @foreground;
+  margin: 0px 0px 5px 0px;
+}
+
+case-indicator {
+  background-color: @background;
+}
+
+entry {
+  background-color: @background;
+  text-color: @foreground;
+  padding: 2px 4px 2px 0px;
+}
+
+prompt {
+  background-color: @background;
+  text-color: @foreground;
+  padding: 2px 4px 2px 10px;
+}
+
+mainbox {
+  background-color: @background;
+  padding: 2px 2px 0px 2px;
+}
+
+listview {
+  lines: 3;
+  background-color: @background;
+}
+
+// Elements (entries)
+
+element {
+  background-color: @background;
+}
+
+element-icon {
+  background-color: @background;
+  padding: 0px 5px 0px 5px;
+}
+
+element-text {
+  background-color: @background;
+  text-color: @foreground;
+  padding: 0px 5px 0px 5px;
+}
+
+// For selected
+
+element.selected {
+  background-color: @background-selected;
+}
+
+element-text.selected {
+  background-color: @background-selected;
+}
+
+element-icon.selected {
+  background-color: @background-selected;
+}
+
+// For errors
+textbox {
+  background-color: @background;
+  text-color: @foreground;
+}
+
